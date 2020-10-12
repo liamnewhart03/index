@@ -57,7 +57,7 @@ secondButton.addEventListener('click', () => {
 			document.write('Owen H gets Dave');
 		}else if(lottery > liam+joseph+milan+louie+emmett+owenS+owenH & lottery <= liam+joseph+milan+louie+emmett+owenS+owenH+august){
 			document.write('August gets Dave');
-		}else if(lottery > liam+joseph+milan+louie+emmett+owenS+owenH+august & lottery <= iam+joseph+milan+louie+emmett+owenS+owenH+august+max){
+		}else if(lottery > liam+joseph+milan+louie+emmett+owenS+owenH+august & lottery <= liam+joseph+milan+louie+emmett+owenS+owenH+august+max){
 			document.write('Max gets Dave');
 	}
 	}
