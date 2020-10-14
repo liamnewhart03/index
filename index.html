@@ -5,6 +5,28 @@
 </head>
 <body>
 
+<script src="data/users.js"></script>
+<script src="data/results.js"></script>
+
 <script src="xcFantasy.js"></script>
+<script>
+  // You can write a function - it is just like a math function - like this with arguments to do some helpful
+  // calculations so you don't need to write the same thing every time.
+  function points(race, user) {
+    // We then do what I did with `results["york"]` and again grab the key which is in this case "liam"
+    // this gets us liam's results for york.  You could have passed in just Liam's results to this method.
+    // if you use `debugger` here you can explore. See the next line for an example - just uncomment it.
+    // debugger;
+    var userRaceResults = race[user];
+
+    return userRaceResults.place + userRaceResults.minutes + userRaceResults.seconds * 100/60/100;
+  }
+
+  // taking the JSON object such as `results` - you can get the data associated with
+  // it by using the name of its 'key' - in this case york.
+  var liamsRacePoints = points(results["york"], "liam"); // here we are using the function points we defined on line 15
+
+  console.log("Hi! This is liamsRacePoints:", liamsRacePoints); // this is just printing stuff out
+</script>
 </body>
 </html>
