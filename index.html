@@ -7,6 +7,71 @@
 </head>
 <body>
 
+<table style="background-color: orange; color: blue;">
+  <thead>
+    <tr>
+      <th>Course</th>
+      <th>Place</th>
+      <th>Time</th>
+      <th>Total Score</th>
+    </tr>
+  </thead>
+  <tbody id="table-body">
+  </tbody>
+</table>
+
 <script src="louDelano.js"></script>
+
+<script type="text/javascript">
+  var results = {
+    liam: {
+      name: "Liam Newhart",
+      results: [
+        {
+          course: "York",
+          place: 6,
+          time: "14:26" // if this is String, it won't sort correctly, but that is for a future lesson.
+        },
+        {
+          course: "Morton",
+          place: 9,
+          time: "16:13"
+        },
+        {
+          course: "DNG",
+          place: 5,
+          time: "16:17"
+        }
+      ]
+    },
+    leo: {}, // other results
+  }
+
+  function calculateFanatasyScore(data) {
+    return "do some calculations here..."
+  }
+
+  function buildAthleteResults(athlete) {
+    var tableBody = document.getElementById("table-body");
+    var athleteResults = results[athlete];
+    var tableData = ""; // this needs to be defined before we start "adding" to it. Comment this out and see what happens
+
+    athleteResults.results.forEach(function(data) { // data, is the result we are iterating through.
+      tableData = tableData + // this allows us to keep what we have built and then "add/append" to it.
+      "<tr>" +
+      "<td>" + data.course + "</td>" +
+      "<td>" + data.place + "</td>" +
+      "<td>" + data.time + "</td>" +
+      "<td>" + calculateFanatasyScore(data) + "</td>"
+      "</tr>"
+    });
+
+    tableBody.innerHTML = tableData; // `innerHTML` is how we add say "take this string data but it interpret it as HTML"
+  }
+
+  // var athlete = localStorage.getItem("athlete"); // you will have to get this from the localStorage, but here I am just seting it as you.
+  buildAthleteResults("liam")
+</script>
+
 </body>
 </html>
