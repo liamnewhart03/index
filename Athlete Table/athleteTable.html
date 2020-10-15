@@ -4,6 +4,11 @@
   
    
     <script type="text/javascript" src="sort-table.js"></script>
+    <script type="text/javascript">
+        function setName(name) {
+            localStorage.setItem("currentAthlete", name);
+        }
+    </script>
     <style type="text/css">
     
         table { border: 1px solid black; border-collapse: collapse; }
@@ -44,19 +49,19 @@
             <td>Level</td>
         </tr>
         <tr>
-            <td><a href="file:///Users/speedyboy/Desktop/XC%20Fantasy/index.html">Lou Delano</a></td>
+            <td><a href="./athlete.html" onClick="setName('lou');">Lou Delano</a></td>
             <td>154.03</td>
             <td>25.67</td>
             <td>Varsity</td>
         </tr>
         <tr>
-            <td><a href="file:///Users/speedyboy/Desktop/XC%20Fantasy/index.html">Liam Newhart</a></td>
+            <td><a href="./athlete.html" onClick="setName('liam');">Liam Newhart</a></td>
             <td>175.37</td>
             <td>29.23</td>
             <td>Varsity</td>
         </tr>
         <tr>
-            <td><a href="file:///Users/speedyboy/Desktop/XC%20Fantasy/index.html">Owen Augustine</a></td>
+            <td><a href="./athlete.html">Owen Augustine</a></td>
             <td>178.70</td>
             <td>29.78</td>
             <td>Varsity</td>

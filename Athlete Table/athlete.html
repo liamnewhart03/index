@@ -1,0 +1,58 @@
+<h1 id="athleteName">Name</h1>
+
+<a href="./athleteTable.html">Athletes</a>
+
+<h2>Results</h2>
+
+<table>
+  <thead>
+    <th>Course</th>
+    <th>Time</th>   
+  </thead>
+  <tbody>
+    <tr>
+      <td id="course">
+        
+      </td>
+      <td id="time">
+        
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<script type="text/javascript">
+  var raceResults = {
+    lou: {
+      name: "Lou Delano",
+      title: "York",
+      place: 7,
+      minutes: 14,
+      seconds: 27
+    },
+    liam: {
+      name: "Liam Newhart",
+      title: "York",
+      place: 6,
+      minutes: 14,
+      seconds: 26
+    }
+  }
+</script>
+
+<script type="text/javascript">
+  var currentAthlete = localStorage.getItem("currentAthlete", name);
+  var athleteData = raceResults[currentAthlete]
+
+  var fullName = athleteData["name"];
+  var h1 = document.getElementById("athleteName");
+  h1.textContent = fullName;
+
+  var courseNameTD = document.getElementById("course");
+  var courseTitle = athleteData["title"];
+  courseNameTD.textContent = courseTitle;
+
+  var finishingTimeTD = document.getElementById("time");
+  var courseTime = athleteData.minutes + ":" + athleteData.seconds;
+  finishingTimeTD.textContent = courseTime;
+</script>
